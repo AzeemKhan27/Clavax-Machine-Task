@@ -1,0 +1,36 @@
+Q4. What is binding ? How many types of binding is there in Angular ? Explain with examples. 
+
+ANS : Binding is a process to send and recieve data and this is two way process.
+
+Type of binding :
+
+1- Interpolation : It is one way data binding, and we used it to insert dynamic data into the HTML template. 
+                   it is using double curly braces {{}} to bind data from the component to the view.
+
+                   FOR EXAMPLE : <h1> {{heading}} </h1>
+
+2- Property Binding : In Property Binding we use square brackets to bind data.
+
+                      FOR EXAMPLE : <input [value]="name">
+
+3- Event Binding : It is allowing us to listen for events in view and call a method in component when the event occurs.
+
+                    FOR EXAMPLE : <button (click)="greet()"> Click Me </button>
+
+4- Two way Data Binding : two way data binding is allow to synchronization between the model and the view.
+
+                    FOR EXAMPLE : <input [(ngModel)]="name">
+                                  <p>Your name is {{name}} </p>
+
+5- Attribute Binding : It is allowing us to bind values in attributes of HTML elements.
+
+                    FOR EXAMPLE : <button [attr.aria-label] = "label" > Click Me </button>
+
+6- Class Binding : Class Binding allows to add or remove CSS classes.
+
+                    FOR EXAMPLE : <div [class.active]="isActive"> Content </div>
+
+7- Style Binding : It is allowing us to bind values in CSS.
+
+                    FOR EXAMPLE : <div [style.background-color] = "color"> Styled Content </div>
+

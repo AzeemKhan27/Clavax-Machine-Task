@@ -1,0 +1,29 @@
+Q5. What is Dependency Injection in Angular
+
+ANS : Dependency Injection in Angular is a way to provide components or services with their its Dependencies from an external
+      source rather than creating them internally. it is promoting modularity and testability.
+
+
+1- Create Service:-
+
+      user.service.ts :
+
+      export class UserService {
+        getUser(){
+            return "Azeem Khan";
+        }
+      }
+
+2- Inject the service into component
+
+    app.component.ts :
+
+    import {UserService} from "user.service";
+
+    export class AppComponent {
+        user : string;
+
+        constructor(private userServices : UserService){
+            this.user = this.userService.getUser();
+        }
+    }
